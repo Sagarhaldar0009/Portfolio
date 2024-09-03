@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: rgb(11, 26, 51);
+    color: white;
+}
+
+@keyframes pulse-shadow {
+    0%, 100% {
+      box-shadow: 0 0 20px 4px rgba(255, 255, 0, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 40px 8px rgba(255, 255, 0, 0.3);
+    }
+  }
+  
+  .pulse-shadow {
+    animation: pulse-shadow 2s infinite;
+  }
+  
