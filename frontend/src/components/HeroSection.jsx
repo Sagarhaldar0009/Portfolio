@@ -45,10 +45,7 @@ const HeroSection = () => {
     fetchProfile();
   }, []);
 
-  if (loading) return <div className='flex flex-col'>
-                          <Spinner/>
-                          <p>wait a minute, Loading...</p>
-                      </div>;
+  
 
   return (
     <div className="flex flex-col-reverse md:flex-row justify-center items-center mb-20 mt-12 md:mb-20 md:mt-20 px-4 md:px-0">
@@ -106,10 +103,17 @@ const HeroSection = () => {
 
       {/* Image Portion */}
       <div className="md:w-1/2 w-full flex justify-center md:justify-center">
-        <img
-          src={profile.profileUrl}
-          className="w-2/3 md:w-3/4 lg:w-2/3 rounded-full shadow-md transition duration-300 hover:shadow-lg hover:shadow-yellow-500/50 pulse-shadow"
-        />
+        {
+          (loading) ? 
+          (<div><Spinner/></div>)
+          :
+          (
+            <img
+              src={profile.profileUrl}
+              className="w-2/3 md:w-3/4 lg:w-2/3 rounded-full shadow-md transition duration-300 hover:shadow-lg hover:shadow-yellow-500/50 pulse-shadow"
+            />
+          )
+        }
       </div>
 
     </div>
