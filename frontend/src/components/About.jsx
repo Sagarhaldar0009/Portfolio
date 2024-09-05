@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import API from '../api/index.js';
 import { IoPersonSharp, IoArrowRedoSharp } from 'react-icons/io5';
+import Spinner from './Loading/Spinner.jsx';
 
 function About() {
   const [aboutData, setAboutData] = useState({
@@ -12,28 +13,31 @@ function About() {
     resume: ''
   });
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchAboutData = async () => {
+      setLoading(true);
       try {
         const response = await API.get('/about');
         if (response.data.length > 0) {
           setAboutData(response.data[0]); // Set the state with the first object in the array
-          setLoading(false);
         }
       } catch (error) {
         console.error('Error fetching about data:', error);
-        setLoading(false);
       }
+      setLoading(false);
     };
 
     fetchAboutData();
   }, []);
 
 
-  if (loading) return <div>Loading...</div>;
-  
+  if (loading) return <div className='flex flex-col'>
+                          <Spinner/>
+                          <p>wait a minute, Loading...</p>
+                      </div>;
+
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center py-8 px-4 bg-[rgb(11,26,51)] text-white">

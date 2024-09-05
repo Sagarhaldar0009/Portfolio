@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import API from '../api/index.js';
 import { MdWork } from "react-icons/md";
+import Spinner from './Loading/Spinner.jsx';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Fetch projects from your backend API
     const fetchProjects = async () => {
+      setLoading(true)
       try {
         const response = await API.get('/projects'); // Update this URL to your actual backend API
         // console.log(response.data);
@@ -15,10 +18,16 @@ const Projects = () => {
       } catch (error) {
         console.error('Error fetching projects:', error);
       }
+      setLoading(false);
     };
 
     fetchProjects();
   }, []);
+
+  if (loading) return <div className='flex flex-col'>
+                          <Spinner/>
+                          <p>wait a minute, Loading...</p>
+                      </div>;
 
   return (
     <div className="w-full py-10 px-4 sm:px-6 lg:px-8 bg-[rgb(11,26,51)]">

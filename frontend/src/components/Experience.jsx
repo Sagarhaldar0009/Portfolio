@@ -2,22 +2,31 @@
 import React, { useEffect, useState } from 'react';
 import API from '../api/index.js';
 import { BsSuitcaseLgFill } from "react-icons/bs";
+import Spinner from './Loading/Spinner.jsx';
 
 const Experience = () => {
   const [experiences, setExperiences] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchExperiences = async () => {
+      setLoading(true);
       try {
         const response = await API.get('/experience'); // Update this URL to your actual backend API
         setExperiences(response.data);
       } catch (error) {
         console.error('Error fetching experiences:', error);
       }
+      setLoading(false);
     };
 
     fetchExperiences();
   }, []);
+
+  if (loading) return <div className='flex flex-col'>
+                          <Spinner/>
+                          <p>wait a minute, Loading...</p>
+                      </div>;
 
   return (
     <div className=" py-10 px-4 sm:px-6 lg:px-8 bg-[rgb(11,26,51)] text-white">

@@ -1,28 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import API from '../api';
 import { FaLaptop } from "react-icons/fa";
+import Spinner from './Loading/Spinner';
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchSkills = async () => {
+      setLoading(true);
       try {
         const response = await API.get('/skills');
         setSkills(response.data);
         setLoading(false);
       } catch (err) {
-        setError(err.message);
-        setLoading(false);
+        setError(err.message); 
       }
+      setLoading(false);
     };
 
     fetchSkills();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className='flex flex-col'>
+                          <Spinner/>
+                          <p>wait a minute, Loading...</p>
+                      </div>;
+                      
   if (error) return <div>Error: {error}</div>;
 
   return (

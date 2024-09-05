@@ -7,6 +7,7 @@ import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import API from '../api/index.js';
+import Spinner from "./Loading/Spinner.jsx";
 
 const HeroSection = () => {
   const [typeEffect] = useTypewriter({
@@ -25,10 +26,12 @@ const HeroSection = () => {
   });
 
   const [profile, setProfile] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Fetch profile pic from your backend API
     const fetchProfile = async () => {
+      setLoading(true);
       try {
         const response = await API.get('/home'); // Update this URL to your actual backend API
         // console.log(response.data);
@@ -36,10 +39,16 @@ const HeroSection = () => {
       } catch (error) {
         console.error('Error in fetching Profile Pic :', error);
       }
+      setLoading(false);
     };
 
     fetchProfile();
   }, []);
+
+  if (loading) return <div className='flex flex-col'>
+                          <Spinner/>
+                          <p>wait a minute, Loading...</p>
+                      </div>;
 
   return (
     <div className="flex flex-col-reverse md:flex-row justify-center items-center mb-20 mt-12 md:mb-20 md:mt-20 px-4 md:px-0">
