@@ -12,20 +12,28 @@ function About() {
     resume: ''
   });
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchAboutData = async () => {
       try {
         const response = await API.get('/about');
         if (response.data.length > 0) {
           setAboutData(response.data[0]); // Set the state with the first object in the array
+          setLoading(false);
         }
       } catch (error) {
         console.error('Error fetching about data:', error);
+        setLoading(false);
       }
     };
 
     fetchAboutData();
   }, []);
+
+
+  if (loading) return <div>Loading...</div>;
+  
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center py-8 px-4 bg-[rgb(11,26,51)] text-white">
