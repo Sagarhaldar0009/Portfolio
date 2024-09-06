@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-      <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-8">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">Login</h2>
+    <div className="flex items-center justify-center min-h-screen bg-[rgb(11,26,51)] p-4">
+      <div className="w-full max-w-md bg-slate-800 shadow-lg rounded-lg p-8">
+        <h2 className="text-2xl font-bold mb-6 text-white text-center">Login</h2>
         <form>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 text-sm font-semibold mb-2">Email</label>
+            <label htmlFor="email" className="block text-white text-sm font-semibold mb-2">Email</label>
             <input
               id="email"
               type="email"
@@ -19,7 +19,7 @@ const LoginPage = () => {
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="password" className="block text-gray-700 text-sm font-semibold mb-2">Password</label>
+            <label htmlFor="password" className="block text-white text-sm font-semibold mb-2">Password</label>
             <input
               id="password"
               type="password"
@@ -37,7 +37,7 @@ const LoginPage = () => {
           </button>
         </form>
         <div className="mt-4 text-center">
-          <Link to="/" className="text-blue-500 hover:text-blue-700 text-sm font-semibold">Back to Homepage</Link>
+          <Link to="/" className="text-white hover:text-blue-700 text-sm font-semibold">Back to Homepage</Link>
         </div>
       </div>
     </div>

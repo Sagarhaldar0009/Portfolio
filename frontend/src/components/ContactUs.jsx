@@ -5,7 +5,7 @@ import { useForm, ValidationError } from '@formspree/react';
 function ContactUs() {
   const [state, handleSubmit] = useForm("mvgpzgde");
   if (state.succeeded) {
-      return <p className="text-green-500 font-bold text-center">Thanks for joining!</p>;
+      return <p className="text-green-500 font-bold text-center">Your Message has been sent!</p>;
   }
   return (
     <div className="min-h-screen bg-[rgb(11,26,51)] flex flex-col items-center justify-center">
