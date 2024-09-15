@@ -34,7 +34,7 @@ const Projects = () => {
         loading ? (<Spinner/>) : (
           <div className="flex flex-wrap -mx-4">
             {projects.map((project) => (
-              <div key={project._id} className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div key={project._id} className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8 transition-transform duration-300 hover:scale-102 sm:hover:scale-105 hover:shadow-2xl">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
                     <img src={project.image} alt={project.name} className="w-full h-48 object-cover" />

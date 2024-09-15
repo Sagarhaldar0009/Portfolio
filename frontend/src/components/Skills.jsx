@@ -32,9 +32,9 @@ const Skills = () => {
       
       {
         (loading) ? (<Spinner/>) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-[rgb(11,26,51)] text-white p-4 sm:p-5 md:p-6 lg:p-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-[rgb(11,26,51)] text-white p-4 sm:p-5 md:p-6 lg:p-8 ">
             {skills.map((skill) => (
-              <div key={skill._id} className="bg-white shadow-md rounded-lg p-4 sm:p-5 md:p-6 lg:p-8">
+              <div key={skill._id} className="bg-white shadow-md rounded-lg p-4 sm:p-5 md:p-6 lg:p-8 transition-transform duration-300 hover:scale-102 sm:hover:scale-105 hover:shadow-2xl">
                 <img src={skill.image} alt={skill.name} className="w-16 h-16 sm:w-20 sm:h-20 mx-auto" />
                 <h2 className="text-lg sm:text-xl font-bold text-center mt-4 text-black">{skill.name}</h2>
               </div>

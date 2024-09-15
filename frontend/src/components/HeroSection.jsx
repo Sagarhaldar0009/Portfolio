@@ -105,16 +105,20 @@ const HeroSection = () => {
       {/* Image Portion */}
       <div className="md:w-1/2 w-full flex justify-center md:justify-center">
         {
-          (loading) ? 
-          (<div><Spinner/></div>)
-          :
-          (
-            <img
-              // src={profile.profileUrl}
-              src={favicon}
-              className="w-2/3 md:w-3/4 lg:w-2/3 rounded-full shadow-md transition duration-300 hover:shadow-lg hover:shadow-yellow-500/50 pulse-shadow"
-            />
-          )
+          <img
+          src={favicon}
+          className="w-2/3 md:w-3/4 lg:w-2/3 rounded-full shadow-md transition duration-300 hover:shadow-lg hover:shadow-yellow-500/50 pulse-shadow transition-transform duration-300 hover:scale-102 sm:hover:scale-105 hover:shadow-2xl"
+        />
+          // (loading) ? 
+          // (<div><Spinner/></div>)
+          // :
+          // (
+          //   <img
+          //     // src={profile.profileUrl}
+          //     src={favicon}
+          //     className="w-2/3 md:w-3/4 lg:w-2/3 rounded-full shadow-md transition duration-300 hover:shadow-lg hover:shadow-yellow-500/50 pulse-shadow"
+          //   />
+          // )
         }
       </div>
 

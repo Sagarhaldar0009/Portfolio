@@ -34,7 +34,7 @@ const Experience = () => {
         (loading) ? (<Spinner/>) : (
           <div className="space-y-8">
             {experiences.slice().reverse().map((experience) => (
-              <div key={experience._id} className="rounded-lg bg-slate-800 shadow-lg p-6">
+              <div key={experience._id} className="rounded-lg bg-slate-800 shadow-lg p-6 transition-transform duration-300 hover:scale-102 sm:hover:scale-105 hover:shadow-2xl">
                 <div className="mb-4">
                   <h2 className="text-2xl font-bold text-white">{experience.company}</h2>
                 </div>

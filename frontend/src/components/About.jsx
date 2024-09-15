@@ -51,7 +51,7 @@ function About() {
           <div className="flex flex-col lg:flex-row w-full max-w-screen-lg mx-auto items-center justify-center">
             {/* Image */}
             <div className="lg:w-2/4 w-full flex justify-center lg:justify-end lg:pr-8 mb-8 lg:mb-0">
-              <img src={aboutData.imageUrl} className="h-80 lg:h-96 w-auto rounded-full shadow-md transition duration-300 hover:shadow-lg hover:shadow-yellow-500/50 pulse-shadow" alt="About Me" />
+              <img src={aboutData.imageUrl} className="h-80 lg:h-96 w-auto rounded-full shadow-md transition duration-300 hover:shadow-lg hover:shadow-yellow-500/50 pulse-shadow transition-transform duration-300 hover:scale-102 sm:hover:scale-105 hover:shadow-2xl" alt="About Me" />
             </div>
 
             {/* Written Side */}

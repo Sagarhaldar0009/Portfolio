@@ -37,7 +37,7 @@ const Education = () => {
             <div className="absolute inset-0 flex justify-center items-center w-1 bg-blue-500"></div>
             <div className="relative z-10">
               {educations.slice().reverse().map((education, index) => (
-                <div key={education._id} className="mb-12 pl-10">
+                <div key={education._id} className="mb-12 pl-10 transition-transform duration-300 hover:scale-102 sm:hover:scale-105 hover:shadow-2xl">
                   <div className="relative flex items-center">
                     <div className="absolute left-0 flex items-center justify-center w-10 h-10 bg-blue-500 rounded-full text-white">
                       {educations.length - index}

@@ -33,13 +33,13 @@ const NavBar = () => {
 
         {/* Navigation Links for Large Screens */}
         <div className='hidden md:flex items-center gap-4 text-xl'>
-          <a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className='hover:text-blue-800 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Home</a>
-          <a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className='hover:text-blue-800 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>About</a>
-          <a href="#experience" onClick={(e) => handleLinkClick(e, 'experience')} className='hover:text-blue-800 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Experience</a>
-          <a href="#skills" onClick={(e) => handleLinkClick(e, 'skills')} className='hover:text-blue-800 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Skills</a>          
-          <a href="#projects" onClick={(e) => handleLinkClick(e, 'projects')} className='hover:text-blue-800 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Projects</a>
-          <a href="#education" onClick={(e) => handleLinkClick(e, 'education')} className='hover:text-blue-800 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Education</a>
-          <a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className='hover:text-blue-800 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Contact</a>
+          <a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Home</a>
+          <a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>About</a>
+          <a href="#experience" onClick={(e) => handleLinkClick(e, 'experience')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Experience</a>
+          <a href="#skills" onClick={(e) => handleLinkClick(e, 'skills')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Skills</a>          
+          <a href="#projects" onClick={(e) => handleLinkClick(e, 'projects')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Projects</a>
+          <a href="#education" onClick={(e) => handleLinkClick(e, 'education')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Education</a>
+          <a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Contact</a>
         </div>
 
         {/* Admin Panel Link */}
@@ -62,14 +62,14 @@ const NavBar = () => {
       {navOpen && (
         <div className='md:hidden bg-white shadow-lg'>
           <div className='flex flex-col items-center gap-4 p-5 text-xl bg-[rgb(11,26,51)] text-white'>
-            <a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className='hover:text-blue-800 transition ease-in duration-200'>Home</a>
-            <a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className='hover:text-blue-800 transition ease-in duration-200'>About</a>
-            <a href="#experience" onClick={(e) => handleLinkClick(e, 'experience')} className='hover:text-blue-800 transition ease-in duration-200'>Experience</a>
-            <a href="#skills" onClick={(e) => handleLinkClick(e, 'skills')} className='hover:text-blue-800 transition ease-in duration-200'>Skills</a>
-            <a href="#education" onClick={(e) => handleLinkClick(e, 'education')} className='hover:text-blue-800 transition ease-in duration-200'>Education</a>
-            <a href="#projects" onClick={(e) => handleLinkClick(e, 'projects')} className='hover:text-blue-800 transition ease-in duration-200'>Projects</a>
-            <a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className='hover:text-blue-800 transition ease-in duration-200'>Contact</a>
-            <Link to="/login" className='flex items-center text-xl hover:text-blue-800 transition ease-in duration-200' onClick={handleNavToggle}>
+            <a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className='hover:text-yellow-400 transition ease-in duration-200'>Home</a>
+            <a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className='hover:text-yellow-400 transition ease-in duration-200'>About</a>
+            <a href="#experience" onClick={(e) => handleLinkClick(e, 'experience')} className='hover:text-yellow-400 transition ease-in duration-200'>Experience</a>
+            <a href="#skills" onClick={(e) => handleLinkClick(e, 'skills')} className='hover:text-yellow-400 transition ease-in duration-200'>Skills</a>
+            <a href="#education" onClick={(e) => handleLinkClick(e, 'education')} className='hover:text-yellow-400 transition ease-in duration-200'>Education</a>
+            <a href="#projects" onClick={(e) => handleLinkClick(e, 'projects')} className='hover:text-yellow-400 transition ease-in duration-200'>Projects</a>
+            <a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className='hover:text-yellow-400 transition ease-in duration-200'>Contact</a>
+            <Link to="/login" className='flex items-center text-xl hover:text-yellow-400 transition ease-in duration-200' onClick={handleNavToggle}>
               <MdAdminPanelSettings className="text-blue-500 text-4xl" />
               <span className="ml-2 text-2xl font-bold">Admin</span>
             </Link>
