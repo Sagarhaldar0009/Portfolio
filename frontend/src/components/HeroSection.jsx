@@ -8,6 +8,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import API from '../api/index.js';
 import Spinner from "./Loading/Spinner.jsx";
+import favicon from '../assets/PortFolio_Favicon.png';
 
 const HeroSection = () => {
   const [typeEffect] = useTypewriter({
@@ -109,7 +110,8 @@ const HeroSection = () => {
           :
           (
             <img
-              src={profile.profileUrl}
+              // src={profile.profileUrl}
+              src={favicon}
               className="w-2/3 md:w-3/4 lg:w-2/3 rounded-full shadow-md transition duration-300 hover:shadow-lg hover:shadow-yellow-500/50 pulse-shadow"
             />
           )
