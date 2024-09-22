@@ -44,12 +44,12 @@ const NavBar = () => {
         </div>
 
         {/* Admin Panel Link */}
-        <div className='hidden md:flex items-center'>
+        {/* <div className='hidden md:flex items-center'>
           <Link to="/login" className='flex items-center text-xl p-5 hover:text-blue-800 transition ease-in duration-200'>
             <MdAdminPanelSettings className="text-blue-500 text-4xl" />
             <span className="ml-2 text-2xl font-bold">Admin</span>
           </Link>
-        </div>
+        </div> */}
 
         {/* Hamburger Icon for Mobile */}
         <div className='md:hidden flex items-center'>
@@ -69,11 +69,8 @@ const NavBar = () => {
             <a href="#skills" onClick={(e) => handleLinkClick(e, 'skills')} className='hover:text-yellow-400 transition ease-in duration-200'>Skills</a>
             <a href="#education" onClick={(e) => handleLinkClick(e, 'education')} className='hover:text-yellow-400 transition ease-in duration-200'>Education</a>
             <a href="#projects" onClick={(e) => handleLinkClick(e, 'projects')} className='hover:text-yellow-400 transition ease-in duration-200'>Projects</a>
-            <a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className='hover:text-yellow-400 transition ease-in duration-200'>Contact</a>
-            <Link to="/login" className='flex items-center text-xl hover:text-yellow-400 transition ease-in duration-200' onClick={handleNavToggle}>
-              <MdAdminPanelSettings className="text-blue-500 text-4xl" />
-              <span className="ml-2 text-2xl font-bold">Admin</span>
-            </Link>
+            <a href="#leetcode" onClick={(e) => handleLinkClick(e, 'leetcode')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Coding</a>
+            <a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className='hover:text-yellow-400 transition ease-in duration-200'>Contact</a>     
           </div>
         </div>
       )}
