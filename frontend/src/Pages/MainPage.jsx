@@ -38,6 +38,7 @@ import ContactUs from '../components/ContactUs'
 import Projects from '../components/Projects.jsx'
 import NavBar from '../components/common/NavBar.jsx'
 import Footer from '../components/common/Footer.jsx'
+import LeetCode from '../components/coding/LeetCode.jsx'
 
 const MainPage = () => {
   return (
@@ -60,6 +61,9 @@ const MainPage = () => {
       </div>
       <div id="education">
         <Education />
+      </div>
+      <div>
+        <LeetCode/>
       </div>
       <div id="contact">
         <ContactUs />
