@@ -1,18 +1,9 @@
-// import React from 'react'
-
-// const LeetCode = () => {
-//   return (
-//     <div>LeetCode</div>
-//   )
-// }
-
-// export default LeetCode
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import 'tailwindcss/tailwind.css';
+import Spinner from '../Loading/Spinner';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -24,7 +15,7 @@ const LeetcodeStats = () => {
     // Function to fetch Leetcode user stats data
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://leetcode-stats-api.herokuapp.com/SAGAR_SH_987'); // Replace with actual API
+        const response = await axios.get('https://leetcode-stats-api.herokuapp.com/SAGAR_SH_987');
         setData(response.data);
         setLoading(false);
       } catch (error) {
@@ -36,7 +27,7 @@ const LeetcodeStats = () => {
   }, []);
 
   if (loading) {
-    return <div className="text-center text-xl">Loading...</div>;
+    return <div className="text-center text-xl"><Spinner/></div>;
   }
 
   if (!data) {

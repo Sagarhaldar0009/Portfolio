@@ -62,7 +62,7 @@ const MainPage = () => {
       <div id="education">
         <Education />
       </div>
-      <div>
+      <div id="leetcode">
         <LeetCode/>
       </div>
       <div id="contact">

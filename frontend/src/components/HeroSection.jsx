@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { IoMdArrowRoundDown } from "react-icons/io";
 import { FaLinkedin, FaInstagram, FaFacebook, FaTelegram } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
@@ -7,7 +7,7 @@ import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import API from '../api/index.js';
-import Spinner from "./Loading/Spinner.jsx";
+// import Spinner from "./Loading/Spinner.jsx";
 import favicon from '../assets/PortFolio_Favicon.png';
 
 const HeroSection = () => {
@@ -102,24 +102,16 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Image Portion */}
+      {/* Image Portion with Login Page */}
+      
       <div className="md:w-1/2 w-full flex justify-center md:justify-center">
-        {
+        <Link to="/login"  className="w-full h-full flex justify-center">
           <img
-          src={favicon}
-          className="w-2/3 md:w-3/4 lg:w-2/3 rounded-full shadow-md transition duration-300 hover:shadow-lg hover:shadow-yellow-500/50 pulse-shadow transition-transform duration-300 hover:scale-102 sm:hover:scale-105 hover:shadow-2xl"
-        />
-          // (loading) ? 
-          // (<div><Spinner/></div>)
-          // :
-          // (
-          //   <img
-          //     // src={profile.profileUrl}
-          //     src={favicon}
-          //     className="w-2/3 md:w-3/4 lg:w-2/3 rounded-full shadow-md transition duration-300 hover:shadow-lg hover:shadow-yellow-500/50 pulse-shadow"
-          //   />
-          // )
-        }
+            src={favicon}
+            className="w-90% h-90% max-w-[75%] md:max-w-[90%] lg:max-w-[75%] rounded-full shadow-md transition duration-300 hover:shadow-lg hover:shadow-yellow-500/50 pulse-shadow transition-transform duration-300 hover:scale-105 hover:shadow-2xl object-cover"
+            alt="Logo"
+          />
+        </Link>
       </div>
 
     </div>

@@ -39,6 +39,7 @@ const NavBar = () => {
           <a href="#skills" onClick={(e) => handleLinkClick(e, 'skills')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Skills</a>          
           <a href="#projects" onClick={(e) => handleLinkClick(e, 'projects')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Projects</a>
           <a href="#education" onClick={(e) => handleLinkClick(e, 'education')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Education</a>
+          <a href="#leetcode" onClick={(e) => handleLinkClick(e, 'leetcode')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Coding</a>
           <a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className='hover:text-yellow-400 hover:border-b hover:border-b-blue-800 transition ease-in duration-200'>Contact</a>
         </div>
 
