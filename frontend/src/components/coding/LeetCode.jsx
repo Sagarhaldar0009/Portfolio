@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import 'tailwindcss/tailwind.css';
+import { SiLeetcode } from "react-icons/si";
 import Spinner from '../Loading/Spinner';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -59,14 +59,22 @@ const LeetcodeStats = () => {
 
   return (
     <div className="max-w-xl mx-auto mt-10 p-5">
-      <h2 className="text-2xl font-bold text-center mb-5">
-        Leetcode Problem Solved Stats
-      </h2>
+      {/* <h1 className="text-4xl font-bold text-white flex gap-1 justify-center">
+        <span><SiLeetcode/></span>
+        Leetcode 
+        <span className='text-yellow-400'>Problems</span>
+      </h1> */}
+      <h1 className="text-4xl font-bold text-white flex gap-1 justify-center items-center">
+  <span><SiLeetcode /></span>
+  Leetcode 
+  <span className='text-yellow-400'>Problems</span>
+</h1>
+
 
       <div className="flex flex-col items-center">
-        <Pie data={chartData} className="w-full h-full max-w-[300px]" />
-        <div className="text-center mt-4">
-          <p className="text-lg font-semibold">
+        <Pie data={chartData} className="w-full h-full max-w-[300px] pt-5" />
+        <div className="text-center mt-1">
+          <p className="text-2xl font-semibold">
             Total Solved: {totalSolved} / {totalQuestions}
           </p>
           <p>Easy: {easySolved} / {totalEasy}</p>
