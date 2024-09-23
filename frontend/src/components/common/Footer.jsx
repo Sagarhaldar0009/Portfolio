@@ -45,17 +45,17 @@ const Footer = () => {
                 </div>
                 <h1 className="group-hover:text-orange-500 transition ease-in duration-200">About</h1>
               </a>
+              <a href="#experience" className="flex gap-x-2 group">
+                <div className="bg-white text-black rounded-full group-hover:text-orange-500 transition ease-in duration-200">
+                  <IoIosArrowForward className="m-1" />
+                </div>
+                <h1 className="group-hover:text-orange-500 transition ease-in duration-200">Experience</h1>
+              </a>
               <a href="#skills" className="flex gap-x-2 group">
                 <div className="bg-white text-black rounded-full group-hover:text-orange-500 transition ease-in duration-200">
                   <IoIosArrowForward className="m-1" />
                 </div>
                 <h1 className="group-hover:text-orange-500 transition ease-in duration-200">Skills</h1>
-              </a>
-              <a href="#education" className="flex gap-x-2 group">
-                <div className="bg-white text-black rounded-full group-hover:text-orange-500 transition ease-in duration-200">
-                  <IoIosArrowForward className="m-1" />
-                </div>
-                <h1 className="group-hover:text-orange-500 transition ease-in duration-200">Education</h1>
               </a>
               <a href="#projects" className="flex gap-x-2 group">
                 <div className="bg-white text-black rounded-full group-hover:text-orange-500 transition ease-in duration-200">
@@ -63,11 +63,17 @@ const Footer = () => {
                 </div>
                 <h1 className="group-hover:text-orange-500 transition ease-in duration-200">Projects</h1>
               </a>
-              <a href="#experience" className="flex gap-x-2 group">
+              <a href="#education" className="flex gap-x-2 group">
                 <div className="bg-white text-black rounded-full group-hover:text-orange-500 transition ease-in duration-200">
                   <IoIosArrowForward className="m-1" />
                 </div>
-                <h1 className="group-hover:text-orange-500 transition ease-in duration-200">Experience</h1>
+                <h1 className="group-hover:text-orange-500 transition ease-in duration-200">Education</h1>
+              </a>
+              <a href="#leetcode" className="flex gap-x-2 group">
+                <div className="bg-white text-black rounded-full group-hover:text-orange-500 transition ease-in duration-200">
+                  <IoIosArrowForward className="m-1" />
+                </div>
+                <h1 className="group-hover:text-orange-500 transition ease-in duration-200">Coding</h1>
               </a>
             </div>
           </div>
